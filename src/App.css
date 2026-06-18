@@ -1,0 +1,208 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.event-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.event-list input {
+  margin-bottom: 30px;
+}
+
+/* Left Column */
+.side-bar {
+
+  border: 2px solid #ccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-item {
+  border: 2px solid #3498db;
+  /* Blue boxes from sketch */
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.event-details-card {
+  border: 2px solid #e74c3c;
+  /* Red box from sketch */
+  height: 80%;
+}
+
+.detail-header,
+.detail-datetime {
+  border-bottom: 2px solid #e74c3c;
+  padding: 10px;
+}
+
+/* RIGHT COLUMN */
+.event-details {
+  flex: 2;
+  border: 2px solid #e74c3c;
+  /* red from sketch */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+
+
+/* ===== MODAL OVERLAY ===== */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ===== MODAL CONTAINER ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  border: none;
+  border-radius: 0px;
+  
+
+
+
+}
+
+/* ===== MODAL FORM ===== */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 400px;
+  gap: 15px;
+  padding: 45px;
+  margin-right: 33px;
+  background-color: #967070;
+}
+
+/* ===== MODAL TITLE ===== */
+.modal-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ===== INPUTS ===== */
+.modal-form input,
+.modal-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Focus state */
+.modal-form input:focus,
+.modal-form textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Primary button */
+.modal-actions button[type="submit"] {
+  background-color: #1976d2;
+  color: rgb(245, 234, 234);
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #125aa0;
+}
+
+/* Cancel button */
+.modal-actions button[type="button"] {
+  background-color: #be4a4a;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #cfcfcf;
+}
